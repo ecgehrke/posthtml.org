@@ -41,8 +41,6 @@
         alias: {
           '/.*/_sidebar.md': '/_sidebar.md',
         },
-        changelog:
-          'https://raw.githubusercontent.com/posthtml/posthtml/master/CHANGELOG.md',
         plugins: [
           function (hook, vm) {
             hook.beforeEach(function (html) {
@@ -56,7 +54,6 @@
                   vm.route.file
               }
               var editHtml = '[:memo: Edit Document](' + url + ')\n'
-
               return editHtml + '\n' + html
             })
           },
